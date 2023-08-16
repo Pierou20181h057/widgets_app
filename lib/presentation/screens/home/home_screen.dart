@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -45,11 +46,18 @@ class _CustomListTItle extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context).colorScheme;
     return ListTile(
-      leading: Icon(menuItem.icon, color: theme.primary,),
-      trailing: Icon(Icons.arrow_forward_ios_rounded, color: theme.primary,),
+      leading: Icon(
+        menuItem.icon,
+        color: theme.primary,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        color: theme.primary,
+      ),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
-      onTap: (){
+      onTap: () {
+        Navigator.pushNamed(context, menuItem.link);
         
       },
     );
