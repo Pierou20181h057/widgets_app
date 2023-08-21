@@ -26,4 +26,10 @@ List<MenuItem> appMenuItems = <MenuItem>[
     link: '/cards', 
     icon: Icons.credit_card),
 
+    MenuItem(
+    title: 'ProgressIndicators', 
+    subTitle: 'Generales y controladores', 
+    link: '/progress', 
+    icon: Icons.refresh_rounded),
+
 ];
